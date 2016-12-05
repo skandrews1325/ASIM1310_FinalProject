@@ -3,10 +3,15 @@ Sarah Andrews
 Final Project: Musical sky
 */
 
+PImage mountains;
+PImage moon;
+
 Star[] stars = new Star[2];
 
 void setup() {
   size(1000,650);
+  mountains = loadImage("mountains.png");
+  moon = loadImage("moon.png");
 }
 
 void draw() {
@@ -14,8 +19,10 @@ void draw() {
   
   //moon
   //note: when I get the stars working, need to put boundries around the moon area; No stars should touch the moon
-  ellipse (800, 80, 70, 70);
-  fill(255, 254, 242);
+  image(moon, 750, 50);
+  
+  //mountains
+  image(mountains, 0, 0);
 }
 
 void keyPressed() {
