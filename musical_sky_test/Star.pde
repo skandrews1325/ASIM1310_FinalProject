@@ -16,8 +16,8 @@ class Star {
   float life = 810;
 
   Star() {
-    starX = random(0.0, 0.75);
-    starY = random(0.0, 0.41);
+    starX = random(0.0, 0.97);
+    starY = random(0.0, 0.65);
   }
 
   void drawStar() {

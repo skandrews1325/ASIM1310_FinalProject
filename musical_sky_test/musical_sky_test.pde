@@ -33,6 +33,12 @@ void setup() {
 
 void draw() {
   background(23, 16, 93); //temporary bcolor; will change later after getting the stars to work
+  
+  //stars
+  for (int i = 0; i < stars.size(); i++) {
+    stars.get(i).drawStar();
+  }
+  
   //moon
   //note: when I get the stars working, need to put boundries around the moon area; No stars should touch the moon
   image(moon, 750, 50);
@@ -43,9 +49,6 @@ void draw() {
   
   lightUpSign();
 
-  for (int i = 0; i < stars.size(); i++) {
-    stars.get(i).drawStar();
-  }
 }
 
 void movingClouds() {
@@ -63,14 +66,12 @@ void movingClouds() {
 }
 
 void lightUpSign() {
-  float x = 319;
-  float y = 256;
-  float lightUp = sqrt(pow(mouseX - x,2) + pow(mouseY - y,2)); //NEEDS FIXING
-  if(lightUp > sign1.width && lightUp > sign1.height) {
+  if(mouseX < (width - (sign1.width * 2)) && mouseY> (height - sign1.height)) {
    image (sign2, 0, 394);
   } else {
    image (sign1, 0, 394); 
   }
+  //println (mouseX + " : " + mouseY);
 }
 
 
