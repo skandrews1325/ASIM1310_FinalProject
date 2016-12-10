@@ -1,7 +1,23 @@
 /*
 Sarah Andrews
-ASIM 1310 Final Project: Musical sky
- */
+ASIM 1310 Final Project: Musical Sky
+ 
+ In this program, simply press any of the letter keys (a to z) to fill the sky with stars.
+ Every time a star appears, a random sound (pitch) will accompany it. Each star will fade away over time so don't worry
+ if things get too crowded. 
+ 
+ As a bonus, press one of the number keys (1 to 9) and an aurora will appear scrolling across the screen.
+ The auroras don't make any sound; they do provide some extra color to the scene if the user wishes.
+ Keep pressing a number key to overlap the auroras and produce different color patterns 
+ (WARNING: if you add more than 4 auroras, the program will start to slow down. So try not to spam the number keys!).
+ If one wants to remove the auroras, simply press the backspace key to remove the auroras one by one till left with the original scene.
+ 
+ Also if the user hovers their mouse over the sign post on the ledge, the black writing on the sign will change to a cyan-ish color.
+ 
+ And for the sound, (those using SimpleSynth on a Mac) change the instrument to "Crystal"
+ 
+ For more instructions on the program or for more details on the project itself, go to the PDF file located the in ASIM1310_FinalProject folder
+*/
 
 MidiHandler mh = new MidiHandler();
 int lastPitch = 0;
@@ -71,7 +87,7 @@ void movingClouds() {
 
   image(cloud2, move2, 300);
   move2 = move2 -1;
-  if (move2 < -569) {
+  if (move2 < -603) {
     move2 = width;
   }
 }

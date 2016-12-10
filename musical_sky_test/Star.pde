@@ -4,7 +4,7 @@ The syntax for the drawStar() and star() function is taken from one of the examp
  However, changes have been made to the number of points on the star, its color,
  the star's overall size, and the rotation.
  Plus the starX and starY floats were something I added in to randomize the star's location
- */
+*/
 
 class Star {
 
